@@ -18,29 +18,13 @@ buffer_t bb = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, 0, 0, 0,
 		PTHREAD_COND_INITIALIZER,
 		PTHREAD_COND_INITIALIZER};
 
-
-int killed_duderji = 0;
-int fail_score = 0;
-int score = 0;
-int current_input = 0;
-
-
 int produce_item ()
 {
   int item = (int) (100.0*rand()/(RAND_MAX+1.0));
-  sleep((unsigned long) (5.0*rand()/(RAND_MAX+1.0)));
-  printf("진짜 두더지 발견!: item=%d\n", item);
+  sleep((unsigned long) 1);
+  printf("현재 과제하는 공대생은 %d 명입니다.\n", item);
   return item;
 }
-
-int fake_produce_item ()
-{
-  int item = (int) (100.0*rand()/(RAND_MAX+1.0));
-  sleep((unsigned long) (5.0*rand()/(RAND_MAX+1.0)));
-  printf("가짜 두더지 발견!: item=%d\n", item);
-  return item;
-}
-
 
 insert_item (int item)
 {
@@ -68,16 +52,8 @@ insert_item (int item)
 
 consume_item (int item)
 {
-  sleep((unsigned long)
-	(5.0*rand()/(RAND_MAX+1.0)));
-  printf("\t\tconsume_item: item=%d\n", item);
-}
-
-fake_consume_item (int item)
-{
-  sleep((unsigned long)
-	(5.0*rand()/(RAND_MAX+1.0)));
-  printf("\t\tconsume_item: item=%d\n", item);
+    sleep((unsigned long) 1);
+    printf("\t\t과제하는 %d명의 공대생에게 커피를 지급합니다\n", item);
 }
 
 remove_item (int *temp)
@@ -119,21 +95,12 @@ void * consumer(void *arg)
   }
 }
 
-void * fake_consumer(void *arg)
-{
-  int item;
-  while(1){
-    fake_consum_item(item)yes
-      
-  }
-}
 main ()
 {
   int status;
   void *result;
   pthread_t producer_tid, consumer_tid;
 
-  
   /* 쓰레드 생성 */
   status = pthread_create (&producer_tid, NULL,
 			   producer, NULL);
