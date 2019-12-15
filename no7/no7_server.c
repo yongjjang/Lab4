@@ -50,10 +50,14 @@ main() {
         }
         printf("server : got connection from %s\n", inet_ntoa(clnt_addr.sin_addr));
         memset(buf, 0, MAXBUF);
+
         if (recv(csock, buf, MAXBUF, 0) == -1) {
             perror("recv");
             exit(0);
         }
+
+        printf("%s\n",buf);
+
         if (send(csock, buf, strlen(buf), 0) == -1) {
             perror("send");
             close(csock);
