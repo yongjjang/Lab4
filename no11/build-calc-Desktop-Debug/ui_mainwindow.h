@@ -30,9 +30,9 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QPushButton *cancle;
+    QPushButton *AC_btn;
     QPushButton *zero_btn;
-    QPushButton *allC_btn;
+    QPushButton *divi_btn;
     QPushButton *one_btn;
     QPushButton *two_btn;
     QPushButton *three_btn;
@@ -60,18 +60,18 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(449, 307);
+        MainWindow->resize(451, 307);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        cancle = new QPushButton(centralWidget);
-        cancle->setObjectName(QString::fromUtf8("cancle"));
-        cancle->setGeometry(QRect(20, 220, 80, 22));
+        AC_btn = new QPushButton(centralWidget);
+        AC_btn->setObjectName(QString::fromUtf8("AC_btn"));
+        AC_btn->setGeometry(QRect(20, 220, 80, 22));
         zero_btn = new QPushButton(centralWidget);
         zero_btn->setObjectName(QString::fromUtf8("zero_btn"));
         zero_btn->setGeometry(QRect(130, 220, 80, 22));
-        allC_btn = new QPushButton(centralWidget);
-        allC_btn->setObjectName(QString::fromUtf8("allC_btn"));
-        allC_btn->setGeometry(QRect(240, 220, 80, 22));
+        divi_btn = new QPushButton(centralWidget);
+        divi_btn->setObjectName(QString::fromUtf8("divi_btn"));
+        divi_btn->setGeometry(QRect(350, 220, 80, 22));
         one_btn = new QPushButton(centralWidget);
         one_btn->setObjectName(QString::fromUtf8("one_btn"));
         one_btn->setGeometry(QRect(20, 180, 80, 22));
@@ -92,7 +92,7 @@ public:
         six_btn->setGeometry(QRect(240, 140, 80, 22));
         equal_btn = new QPushButton(centralWidget);
         equal_btn->setObjectName(QString::fromUtf8("equal_btn"));
-        equal_btn->setGeometry(QRect(350, 220, 80, 22));
+        equal_btn->setGeometry(QRect(240, 220, 80, 22));
         min_btn = new QPushButton(centralWidget);
         min_btn->setObjectName(QString::fromUtf8("min_btn"));
         min_btn->setGeometry(QRect(350, 180, 80, 22));
@@ -129,7 +129,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 449, 19));
+        menuBar->setGeometry(QRect(0, 0, 451, 19));
         menuYongjjang_s_Caculator = new QMenu(menuBar);
         menuYongjjang_s_Caculator->setObjectName(QString::fromUtf8("menuYongjjang_s_Caculator"));
         MainWindow->setMenuBar(menuBar);
@@ -143,6 +143,7 @@ public:
         menuBar->addAction(menuYongjjang_s_Caculator->menuAction());
 
         retranslateUi(MainWindow);
+        QObject::connect(AC_btn, SIGNAL(clicked()), firstEdit, SLOT(clear()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -150,9 +151,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
-        cancle->setText(QApplication::translate("MainWindow", "C", 0, QApplication::UnicodeUTF8));
+        AC_btn->setText(QApplication::translate("MainWindow", "AC", 0, QApplication::UnicodeUTF8));
         zero_btn->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
-        allC_btn->setText(QApplication::translate("MainWindow", "AC", 0, QApplication::UnicodeUTF8));
+        divi_btn->setText(QApplication::translate("MainWindow", "/", 0, QApplication::UnicodeUTF8));
         one_btn->setText(QApplication::translate("MainWindow", "1", 0, QApplication::UnicodeUTF8));
         two_btn->setText(QApplication::translate("MainWindow", "2", 0, QApplication::UnicodeUTF8));
         three_btn->setText(QApplication::translate("MainWindow", "3", 0, QApplication::UnicodeUTF8));
@@ -161,7 +162,7 @@ public:
         six_btn->setText(QApplication::translate("MainWindow", "6", 0, QApplication::UnicodeUTF8));
         equal_btn->setText(QApplication::translate("MainWindow", "=", 0, QApplication::UnicodeUTF8));
         min_btn->setText(QApplication::translate("MainWindow", "-", 0, QApplication::UnicodeUTF8));
-        mult_btn->setText(QApplication::translate("MainWindow", "X", 0, QApplication::UnicodeUTF8));
+        mult_btn->setText(QApplication::translate("MainWindow", "x", 0, QApplication::UnicodeUTF8));
         seven_btn->setText(QApplication::translate("MainWindow", "7", 0, QApplication::UnicodeUTF8));
         eight_btn->setText(QApplication::translate("MainWindow", "8", 0, QApplication::UnicodeUTF8));
         nine_btn->setText(QApplication::translate("MainWindow", "9", 0, QApplication::UnicodeUTF8));

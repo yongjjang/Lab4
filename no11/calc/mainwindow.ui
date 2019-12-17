@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>449</width>
+    <width>451</width>
     <height>307</height>
    </rect>
   </property>
@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="cancle">
+   <widget class="QPushButton" name="AC_btn">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>C</string>
+     <string>AC</string>
     </property>
    </widget>
    <widget class="QPushButton" name="zero_btn">
@@ -40,17 +40,17 @@
      <string>0</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="allC_btn">
+   <widget class="QPushButton" name="divi_btn">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>350</x>
       <y>220</y>
       <width>80</width>
       <height>22</height>
      </rect>
     </property>
     <property name="text">
-     <string>AC</string>
+     <string>/</string>
     </property>
    </widget>
    <widget class="QPushButton" name="one_btn">
@@ -134,7 +134,7 @@
    <widget class="QPushButton" name="equal_btn">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>240</x>
       <y>220</y>
       <width>80</width>
       <height>22</height>
@@ -167,7 +167,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>X</string>
+     <string>x</string>
     </property>
    </widget>
    <widget class="QPushButton" name="seven_btn">
@@ -284,7 +284,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>449</width>
+     <width>451</width>
      <height>19</height>
     </rect>
    </property>
@@ -307,5 +307,22 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>AC_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>firstEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>75</x>
+     <y>86</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
