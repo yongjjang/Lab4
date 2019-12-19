@@ -7,6 +7,10 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    extern C{
+        
+
+    };
     ui->setupUi(this);
 }
 

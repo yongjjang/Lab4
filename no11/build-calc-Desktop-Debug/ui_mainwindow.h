@@ -95,10 +95,10 @@ public:
         equal_btn->setGeometry(QRect(240, 220, 80, 22));
         min_btn = new QPushButton(centralWidget);
         min_btn->setObjectName(QString::fromUtf8("min_btn"));
-        min_btn->setGeometry(QRect(350, 180, 80, 22));
+        min_btn->setGeometry(QRect(350, 140, 80, 22));
         mult_btn = new QPushButton(centralWidget);
         mult_btn->setObjectName(QString::fromUtf8("mult_btn"));
-        mult_btn->setGeometry(QRect(350, 140, 80, 22));
+        mult_btn->setGeometry(QRect(350, 180, 80, 22));
         seven_btn = new QPushButton(centralWidget);
         seven_btn->setObjectName(QString::fromUtf8("seven_btn"));
         seven_btn->setGeometry(QRect(20, 100, 80, 22));
@@ -169,7 +169,7 @@ public:
         plus_btn->setText(QApplication::translate("MainWindow", "+", 0, QApplication::UnicodeUTF8));
         expr_symbol->setText(QString());
         expr_equal->setText(QApplication::translate("MainWindow", "=", 0, QApplication::UnicodeUTF8));
-        menuYongjjang_s_Caculator->setTitle(QApplication::translate("MainWindow", "Yongjjang's Caculator", 0, QApplication::UnicodeUTF8));
+        menuYongjjang_s_Caculator->setTitle(QApplication::translate("MainWindow", "Inan Calc", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
