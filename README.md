@@ -1,5 +1,8 @@
 # Lab4
-System Programming socket &amp; thread &amp; GUI
+System Programming socket &amp; thread &amp; GUI on Linux
+
+## 개요
+- 쓰레드 및 소켓에 대한 기본 개념 확립, 프로그래밍 및 설계 능력 함양을 위한 프로젝트
 
 #### 1. 자신의 github 저장소에 lab4 프로젝트를 생성하고 아래의 모든 과제 프로그램을 업로드한다.
 #### 2. 쓰레드 관련 함수들을 사용하여 프로그램을 작성하고 실행하여 보고, 익숙해지도록 사용해 본다.
